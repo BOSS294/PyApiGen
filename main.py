@@ -8,12 +8,14 @@ from PyQt5.QtWidgets import (
 from PyQt5.QtGui import QFont
 from PyQt5.QtCore import Qt, QDateTime
 
+
 class ApiKeyGenerator(QWidget):
     def __init__(self):
         super().__init__()
         self.setWindowTitle("API Key Generator")
         self.setGeometry(100, 100, 800, 600)
         self.setStyleSheet("background-color: black; color: white;")
+        
 
         self.initUI()
 
@@ -96,7 +98,7 @@ class ApiKeyGenerator(QWidget):
         meta_data = [
             ("Developed on:", QDateTime.currentDateTime().toString("dd MMM yyyy")),
             ("Last Updated:", "20 Nov 2024"),
-            ("Version:", "1.0"),
+            ("Version:", "1.1"),
             ("Developed by:", "Mayank Chawdhari"),
             ("Special Thanks to:", "PyQt Community")
         ]
@@ -148,3 +150,4 @@ if __name__ == "__main__":
     window = ApiKeyGenerator()
     window.show()
     sys.exit(app.exec_())
+
